@@ -27,81 +27,82 @@ component persistent="true" table="Users"  schema="dbo" output="false"
 	property name="Create_User" column="Create_User" type="numeric" ormtype="int"; 
 	property name="Modify_Date" column="Modify_Date" type="date" ormtype="timestamp"; 
 	property name="Modify_User" column="Modify_User" type="numeric" ormtype="int"; 
-	property name="User_Activity"type="array" fieldtype="one-to-many" cfc="User_Activity" fkcolumn="Create_User";
+
+	property name="User_Activity"type="array" fieldtype="one-to-one" cfc="User_Activity" fkcolumn="Create_User";
 	
-	property name="User_Activity"type="array" fieldtype="one-to-many" cfc="User_Activity" fkcolumn="Modify_User";
+	property name="User_Activity"type="array" fieldtype="one-to-one" cfc="User_Activity" fkcolumn="Modify_User";
 	
-	property name="Product"type="array" fieldtype="one-to-many" cfc="Product" fkcolumn="Create_User";
+	property name="Product"type="array" fieldtype="one-to-one" cfc="Product" fkcolumn="Create_User";
 	
-	property name="Product"type="array" fieldtype="one-to-many" cfc="Product" fkcolumn="Modify_User";
+	property name="Product"type="array" fieldtype="one-to-one" cfc="Product" fkcolumn="Modify_User";
 	
-	property name="Event_Item"type="array" fieldtype="one-to-many" cfc="Event_Item" fkcolumn="Create_User";
+	property name="Event_Item"type="array" fieldtype="one-to-one" cfc="Event_Item" fkcolumn="Create_User";
 	
-	property name="Event_Item"type="array" fieldtype="one-to-many" cfc="Event_Item" fkcolumn="Modify_User";
+	property name="Event_Item"type="array" fieldtype="one-to-one" cfc="Event_Item" fkcolumn="Modify_User";
 	
-	property name="Product_Terms_Lookup"type="array" fieldtype="one-to-many" cfc="Product_Terms_Lookup" fkcolumn="Create_User";
+	property name="Product_Terms_Lookup"type="array" fieldtype="one-to-one" cfc="Product_Terms_Lookup" fkcolumn="Create_User";
 	
-	property name="Product_Terms_Lookup"type="array" fieldtype="one-to-many" cfc="Product_Terms_Lookup" fkcolumn="Modify_User";
+	property name="Product_Terms_Lookup"type="array" fieldtype="one-to-one" cfc="Product_Terms_Lookup" fkcolumn="Modify_User";
 	
-	property name="Org"type="array" fieldtype="one-to-many" cfc="Org" fkcolumn="Create_User";
+	property name="Org"type="array" fieldtype="one-to-one" cfc="Org" fkcolumn="Create_User";
 	
-	property name="Org"type="array" fieldtype="one-to-many" cfc="Org" fkcolumn="Modify_User";
+	property name="Org"type="array" fieldtype="one-to-one" cfc="Org" fkcolumn="Modify_User";
 	
-	property name="Event_Email"type="array" fieldtype="one-to-many" cfc="Event_Email" fkcolumn="Create_User";
+	property name="Event_Email"type="array" fieldtype="one-to-one" cfc="Event_Email" fkcolumn="Create_User";
 	
-	property name="Event_Email"type="array" fieldtype="one-to-many" cfc="Event_Email" fkcolumn="Modify_User";
+	property name="Event_Email"type="array" fieldtype="one-to-one" cfc="Event_Email" fkcolumn="Modify_User";
 	
-	property name="Event"type="array" fieldtype="one-to-many" cfc="Event" fkcolumn="Create_User";
+	property name="Event"type="array" fieldtype="one-to-one" cfc="Event" fkcolumn="Create_User";
 	
-	property name="Event"type="array" fieldtype="one-to-many" cfc="Event" fkcolumn="Modify_User";
+	property name="Event"type="array" fieldtype="one-to-one" cfc="Event" fkcolumn="Modify_User";
 	
-	property name="Event_Increment"type="array" fieldtype="one-to-many" cfc="Event_Increment" fkcolumn="Create_User";
+	property name="Event_Increment"type="array" fieldtype="one-to-one" cfc="Event_Increment" fkcolumn="Create_User";
 	
-	property name="Event_Increment"type="array" fieldtype="one-to-many" cfc="Event_Increment" fkcolumn="Modify_User";
+	property name="Event_Increment"type="array" fieldtype="one-to-one" cfc="Event_Increment" fkcolumn="Modify_User";
 	
-	property name="Product_Limit"type="array" fieldtype="one-to-many" cfc="Product_Limit" fkcolumn="Modify_User";
+	property name="Product_Limit"type="array" fieldtype="one-to-one" cfc="Product_Limit" fkcolumn="Modify_User";
 	
-	property name="Product_Limit"type="array" fieldtype="one-to-many" cfc="Product_Limit" fkcolumn="Create_User";
+	property name="Product_Limit"type="array" fieldtype="one-to-one" cfc="Product_Limit" fkcolumn="Create_User";
 	
-	property name="Event_Sponsor"type="array" fieldtype="one-to-many" cfc="Event_Sponsor" fkcolumn="Create_User";
+	property name="Event_Sponsor"type="array" fieldtype="one-to-one" cfc="Event_Sponsor" fkcolumn="Create_User";
 	
-	property name="Event_Sponsor"type="array" fieldtype="one-to-many" cfc="Event_Sponsor" fkcolumn="Modify_User";
+	property name="Event_Sponsor"type="array" fieldtype="one-to-one" cfc="Event_Sponsor" fkcolumn="Modify_User";
 	
-	property name="Sponsor_Users"type="array" fieldtype="one-to-many" cfc="Sponsor_Users" fkcolumn="Create_User";
+	property name="Sponsor_Users"type="array" fieldtype="one-to-one" cfc="Sponsor_Users" fkcolumn="Create_User";
 	
-	property name="Sponsor_Users"type="array" fieldtype="one-to-many" cfc="Sponsor_Users" fkcolumn="Modify_User";
+	property name="Sponsor_Users"type="array" fieldtype="one-to-one" cfc="Sponsor_Users" fkcolumn="Modify_User";
 	
-	property name="Event_Email_Address"type="array" fieldtype="one-to-many" cfc="Event_Email_Address" fkcolumn="Create_User";
+	property name="Event_Email_Address"type="array" fieldtype="one-to-one" cfc="Event_Email_Address" fkcolumn="Create_User";
 	
-	property name="Event_Email_Address"type="array" fieldtype="one-to-many" cfc="Event_Email_Address" fkcolumn="Modify_User";
+	property name="Event_Email_Address"type="array" fieldtype="one-to-one" cfc="Event_Email_Address" fkcolumn="Modify_User";
 	
-	property name="Event_Item_Product"type="array" fieldtype="one-to-many" cfc="Event_Item_Product" fkcolumn="Create_User";
+	property name="Event_Item_Product"type="array" fieldtype="one-to-one" cfc="Event_Item_Product" fkcolumn="Create_User";
 	
-	property name="Event_Item_Product"type="array" fieldtype="one-to-many" cfc="Event_Item_Product" fkcolumn="Modify_User";
+	property name="Event_Item_Product"type="array" fieldtype="one-to-one" cfc="Event_Item_Product" fkcolumn="Modify_User";
 	
-	property name="Sponsor"type="array" fieldtype="one-to-many" cfc="Sponsor" fkcolumn="Create_User";
+	property name="Sponsor"type="array" fieldtype="one-to-one" cfc="Sponsor" fkcolumn="Create_User";
 	
-	property name="Sponsor"type="array" fieldtype="one-to-many" cfc="Sponsor" fkcolumn="Modify_User";
+	property name="Sponsor"type="array" fieldtype="one-to-one" cfc="Sponsor" fkcolumn="Modify_User";
 	
-	property name="Lookups"type="array" fieldtype="one-to-many" cfc="Lookups" fkcolumn="Create_User";
+	property name="Lookups"type="array" fieldtype="one-to-one" cfc="Lookups" fkcolumn="Create_User";
 	
-	property name="Lookups"type="array" fieldtype="one-to-many" cfc="Lookups" fkcolumn="Modify_User";
+	property name="Lookups"type="array" fieldtype="one-to-one" cfc="Lookups" fkcolumn="Modify_User";
 	
-	property name="Product_Terms"type="array" fieldtype="one-to-many" cfc="Product_Terms" fkcolumn="Create_User";
+	property name="Product_Terms"type="array" fieldtype="one-to-one" cfc="Product_Terms" fkcolumn="Create_User";
 	
-	property name="Product_Terms"type="array" fieldtype="one-to-many" cfc="Product_Terms" fkcolumn="Modify_User";
+	property name="Product_Terms"type="array" fieldtype="one-to-one" cfc="Product_Terms" fkcolumn="Modify_User";
 	
-	property name="Org_File"type="array" fieldtype="one-to-many" cfc="Org_File" fkcolumn="Create_User";
+	property name="Org_File"type="array" fieldtype="one-to-one" cfc="Org_File" fkcolumn="Create_User";
 	
-	property name="Org_File"type="array" fieldtype="one-to-many" cfc="Org_File" fkcolumn="Modify_User";
+	property name="Org_File"type="array" fieldtype="one-to-one" cfc="Org_File" fkcolumn="Modify_User";
 	
-	property name="Org_Users"type="array" fieldtype="one-to-many" cfc="Org_Users" fkcolumn="Create_User";
+	property name="Org_Users"type="array" fieldtype="one-to-one" cfc="Org_Users" fkcolumn="Create_User";
 	
-	property name="Org_Users"type="array" fieldtype="one-to-many" cfc="Org_Users" fkcolumn="Modify_User";
+	property name="Org_Users"type="array" fieldtype="one-to-one" cfc="Org_Users" fkcolumn="Modify_User";
 	
-	property name="Product_Image"type="array" fieldtype="one-to-many" cfc="Product_Image" fkcolumn="Create_User";
+	property name="Product_Image"type="array" fieldtype="one-to-one" cfc="Product_Image" fkcolumn="Create_User";
 	
-	property name="Product_Image"type="array" fieldtype="one-to-many" cfc="Product_Image" fkcolumn="Modify_User";
+	property name="Product_Image"type="array" fieldtype="one-to-one" cfc="Product_Image" fkcolumn="Modify_User";
 	
 	property name="User_Activity"type="array" fieldtype="one-to-many" cfc="User_Activity" fkcolumn="Users_ID";
 	
@@ -110,5 +111,5 @@ component persistent="true" table="Users"  schema="dbo" output="false"
 	property name="Sponsor_Users"type="array" fieldtype="one-to-many" cfc="Sponsor_Users" fkcolumn="Users_ID";
 	
 	property name="Org_Users"type="array" fieldtype="one-to-many" cfc="Org_Users" fkcolumn="Users_ID";
-		
+
 } 

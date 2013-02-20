@@ -12,9 +12,9 @@ component persistent="true" table="Product"  schema="dbo" output="false"
 	property name="Product_Type" column="Product_Type" type="string" ormtype="string"; 
 	property name="Create_Date" column="Create_Date" type="date" ormtype="timestamp"; 
 	property name="Modify_Date" column="Modify_Date" type="date" ormtype="timestamp"; 
-	property name="Users" fieldtype="many-to-one" cfc="Users" fkcolumn="Create_User";
+	property name="CreateUser" fieldtype="one-to-one" cfc="Users" fkcolumn="Create_User";
 	
-	property name="Users" fieldtype="many-to-one" cfc="Users" fkcolumn="Modify_User";
+	property name="ModifyUser" fieldtype="one-to-one" cfc="Users" fkcolumn="Modify_User";
 	
 	property name="Sponsor" fieldtype="many-to-one" cfc="Sponsor" fkcolumn="Sponsor_ID";
 	

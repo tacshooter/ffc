@@ -12,8 +12,8 @@ component persistent="true" table="Lookups"  schema="dbo" output="false"
 	property name="Active" column="Active" type="numeric" ormtype="byte"; 
 	property name="Create_Date" column="Create_Date" type="date" ormtype="timestamp"; 
 	property name="Modify_Date" column="Modify_Date" type="date" ormtype="timestamp"; 
-	property name="Users" fieldtype="many-to-one" cfc="Users" fkcolumn="Create_User";
+	property name="CreateUser" fieldtype="one-to-one" cfc="Users" fkcolumn="Create_User";
 	
-	property name="Users" fieldtype="many-to-one" cfc="Users" fkcolumn="Modify_User";
+	property name="ModifyUser" fieldtype="one-to-one" cfc="Users" fkcolumn="Modify_User";
 		
 } 
